@@ -68,6 +68,7 @@ class EngTagger
   QUOT  = get_ext('ppr')
   SEN   = get_ext('pp')
   WORD  = get_ext('\w+')
+  PRPS  = get_ext('prps')
 
   # Convert a Treebank-style, abbreviated tag into verbose definitions 
   def self.explain_tag(tag)
