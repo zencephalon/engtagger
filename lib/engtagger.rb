@@ -99,8 +99,8 @@ class EngTagger
     "NNS",  "Noun, plural",
     "PDT",  "Determiner, prequalifier",
     "POS",  "Possessive",
-    "PRP",  "Determiner, possessive second",
-    "PRPS", "Determiner, possessive",
+    "PRP",  "Personal Pronoun",
+    "PRPS", "Possessive Pronoun",
     "RB",   "Adverb",
     "RBR",  "Adverb, comparative",
     "RBS",  "Adverb, superlative",
@@ -662,6 +662,7 @@ class EngTagger
   # from a POS-tagged text.
   def get_max_noun_regex
     regex = /
+        (?:#{PRPS})?
       # optional number, gerund - adjective -participle
       (?:#{NUM})?(?:#{GER}|#{ADJ}|#{PART})*
         # Followed by one or more nouns
